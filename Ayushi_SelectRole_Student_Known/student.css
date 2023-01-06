@@ -1,0 +1,43 @@
+body
+{
+    background-color:aquamarine;
+}
+
+
+
+.student-div
+{
+    width: 550px;
+    height: 350px;
+    background-color: #F6F6F2 ;
+    margin: 150px 480px;
+    border: solid rgb(144, 215, 155) 2px;
+    color: #388087;
+    text-align: center;
+    padding: 15px;
+}
+
+.choose
+{
+    font-size: 25px;
+}
+
+.button
+{
+    font-size: 20px;
+    padding: 8px 20px;
+    border: solid black 2px;
+    border-radius: 5px;
+    margin-bottom: 3px;
+}
+
+button:hover
+{
+   background-color:aquamarine;
+}
+  
+ input.choose
+ {
+    width: 26px;
+    height: 19px;
+ } 
