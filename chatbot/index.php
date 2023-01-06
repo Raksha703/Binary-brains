@@ -13,7 +13,7 @@ if(isset($_POST['talkRes'])){
         die("connection to this database failed due to" . mysqli_connect_error());
     }
 
-    /*Relational tables banana hai further sub options ke liye*/
+    /*Relational tables banana hai further sub options ke liye
     $name= $_POST['name'];
     $talkRes = $_POST['talkRes'];
 
@@ -28,6 +28,7 @@ if(isset($_POST['talkRes'])){
     else{
         echo "ERROR: $sql <br> $con->error";
     }
+    */
 
 }
 ?>
@@ -61,51 +62,8 @@ if(isset($_POST['talkRes'])){
 
     <div class="chat_box">
         <div class="conv-form-wrapper">
-        
-        <!--
-        <form action="" method="get" class="hidden">
-        -->
-        <form action="index.php" method="post" class="hidden">
             
-            <!-- options
-            <select name="programmer" data-conv-question="So, are you a programmer? (this question will fork the conversation based on your answer)">
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-            </select>
-            <div data-conv-fork="programmer">
-                <div data-conv-case="yes">
-                     <input type="text" data-conv-question="A fellow programmer! Cool." data-no-answer="true">
-                </div>
-                <div data-conv-case="no">
-                    <select name="thought" data-conv-question="Have you ever thought about learning? Programming is fun!">
-                        <option value="yes">Yes</option>
-                        <option value="no">No..</option>
-                    </select>
-                </div>
-            </div>
-            -->
-
-            <!--
-            ---------------------options------------------------------------
-            <select name="category" data-conv-question="How can i help you?">
-                <option value="web">Web</option>
-                <option value="marketing">Digital marketing</option>
-            </select>
-            <div data-conv-fork="category">
-                <div data-conv-case="web">
-                    -------------------------------input data-----------------------------------
-                     <input type="text" name="domain_name" data-conv-question="Please tell me domain name">
-                </div>
-                <div data-conv-case="marketing">
-                    <input type="text" name="company_name" data-conv-question="Please tell me company name">
-                </div>
-            </div>
-            <input type="text" name="name" data-conv-question="Please tell me your name">
-            --------------------------------------------confirmation-----------------------------------
-            <select data-conv-question="Confirm?">
-                <option value="confirm">Confirm</option>
-            </select>
-            -->
+        <form action="index.php" method="post" class="hidden">
 
             <input type="text" name="Hello" data-conv-question="Hello, I am your career assistant.">
 
@@ -114,11 +72,13 @@ if(isset($_POST['talkRes'])){
                 <option value="No">No</option>
             </select>
 
-            <select name="talkRes" data-conv-question="Don't worry I am here help you out. <br/>Please answer the following questions <br/>What do you like to do the most?">
+            <select name="talkRes" data-conv-question="Don't worry I am here to help you out. <br/>Please answer the following questions <br/>What do you like to do the most?">
                 <option value="Problems">Help others to resolve their problems</option>
                 <option value="Arts">To do something interesting, unique </option>
                 <option value="Techie">Excited in kowing about new technologies</option>
                 <option value="History">Interested in knowing about the mystries of things arround you</option>
+                <option value="Management">Love things in only properly managed way</option>
+                <option value="Medical">Like to take care of others selflessly</option>
                 <option value="Other">Other</option>
             </select>
             <div data-conv-fork="talkRes">
@@ -155,20 +115,28 @@ if(isset($_POST['talkRes'])){
                         <option value="Animal">Interested to know human and animal history</option>
                     </select>
                 </div>
+                <div data-conv-case="Management">
+                    <select name="talkRes" data-conv-question="Which description sits your personality the most? ">
+                        <option value="Marketing">Updated about new products and user's interest</option>
+                        <option value="HumanResource">Planning, coordinating, and supervising the work of juniors</option>
+                        <option value="Production">Overseeing the production process and coordinates all activities to ensure enough resources on hand.</option>
+                    </select>
+                </div>
+                <div data-conv-case="Medical">
+                    <select name="talkRes" data-conv-question="Which description sits your personality the most? ">
+                        <option value="Pharmacy">Providing medicines to patients</option>
+                        <option value="Doctor">Love to heal others</option>
+                    </select>
+                </div>
             </div>
 
-            <select name="lead" data-conv-question="Do you like to lead other? ">
+            <select name="intro" data-conv-question="According to above survey I think Web development field will fit you the most. <br/> Do you want to know the roadmap for the same?">
                 <option value="yes">Yes</option>
                 <option value="No">No</option>
             </select>
-
-            <select name="error" data-conv-question="Do you like to find errors or mistakes and resolve? ">
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-            </select>
             
             <!--sirf display krna hai input nhi lena-->
-            <input type="text" name="thanks" data-conv-question="Thank you.">
+            <input type="text" name="bye" data-conv-question="I believe you will do your best and achieve success, so good luck<br/>Bye">
 
         </form>
     </div>
