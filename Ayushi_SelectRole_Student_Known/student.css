@@ -1,9 +1,20 @@
-body
+/* body 
 {
-    background-color:aquamarine;
+    background-image: url("images/student.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+} */
+
+/* Above lines for background image */
+
+body{
+    background-color:#8ec6cb;
 }
 
-
+h1{
+    font-family: 'Ubuntu', sans-serif;
+}
 
 .student-div
 {
@@ -15,11 +26,14 @@ body
     color: #388087;
     text-align: center;
     padding: 15px;
+    border-radius: 14px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .choose
 {
     font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .button
@@ -33,7 +47,7 @@ body
 
 button:hover
 {
-   background-color:aquamarine;
+   background-color:rgb(104, 157, 159);
 }
   
  input.choose
