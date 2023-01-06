@@ -1,7 +1,16 @@
-body{
-    background-color:bisque;
-}
+/* body 
+{
+    background-image: url("images/login.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+} */
 
+/* Above code for background image */
+body
+{
+    background-color: darkcyan;
+}
 
 .role-div
 {
@@ -9,21 +18,24 @@ body{
     color: #388087;
     text-align: center;
     width: 500px;
-    height: 400px;
-    margin: 150px 480px;
-    border: solid black 2px;
-    
+    height: 450px;
+    margin: 120px 490px;
+    border: black 2px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .heading
 {
     font-size:50px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .choose
 {
     font-size: 30px;
     line-height: 2px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 button
