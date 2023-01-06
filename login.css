@@ -1,0 +1,41 @@
+body{
+    background-color:bisque;
+}
+
+
+.role-div
+{
+    background-color: #F6F6F2;
+    color: #388087;
+    text-align: center;
+    width: 500px;
+    height: 400px;
+    margin: 150px 480px;
+    border: solid black 2px;
+    
+}
+
+.heading
+{
+    font-size:50px;
+}
+
+.choose
+{
+    font-size: 30px;
+    line-height: 2px;
+}
+
+button
+{
+    font-size: 25px;
+    padding: 10px 24px;
+    border: solid black 2px;
+    border-radius: 5px;
+}
+  
+ input.choose
+ {
+    width: 20px;
+    height: 20px;
+ } 
