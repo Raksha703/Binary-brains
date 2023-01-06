@@ -11,6 +11,10 @@
     <script type="text/javascript" src="jquery-3.6.3.js"></script>
     <script type="text/javascript" src="custom.js"></script>
     <script type="text/javascript" src="jquery.convform.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Dosis&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Dosis&family=Roboto:wght@100;300&display=swap'); </style>
+
 </head>
 <body>
     <img class="chat_icon" src="iii.png">
@@ -71,16 +75,18 @@
 
             <input type="text" name="Hello" data-conv-question="Hello, I am your career assistant.">
 
-            <select name="intro" data-conv-question="Are you confused in choosing your career field? (Yes/No)">
+            <select name="intro" data-conv-question="Are you confused in choosing your career field?">
                 <option value="yes">Yes</option>
                 <option value="No">No</option>
             </select>
 
-            <select name="talkRes" data-conv-question="Don't worry I am here help you out. <br/>Please answer the following questions <br/>What do you like to do the most?">
+            <select name="talkRes" data-conv-question="Don't worry I am here to help you out. <br/>Please answer the following questions <br/>What do you like to do the most?">
                 <option value="Problems">Help others to resolve their problems</option>
                 <option value="Arts">To do something interesting, unique </option>
                 <option value="Techie">Excited in kowing about new technologies</option>
                 <option value="History">Interested in knowing about the mystries of things arround you</option>
+                <option value="Management">Love things in only properly managed way</option>
+                <option value="Medical">Like to take care of others selflessly</option>
                 <option value="Other">Other</option>
             </select>
             <div data-conv-fork="talkRes">
@@ -117,20 +123,28 @@
                         <option value="Animal">Interested to know human and animal history</option>
                     </select>
                 </div>
+                <div data-conv-case="Management">
+                    <select name="talkRes" data-conv-question="Which description sits your personality the most? ">
+                        <option value="Marketing">Updated about new products and user's interest</option>
+                        <option value="HumanResource">Planning, coordinating, and supervising the work of juniors</option>
+                        <option value="Production">Overseeing the production process and coordinates all activities to ensure enough resources on hand.</option>
+                    </select>
+                </div>
+                <div data-conv-case="Medical">
+                    <select name="talkRes" data-conv-question="Which description sits your personality the most? ">
+                        <option value="Pharmacy">Providing medicines to patients</option>
+                        <option value="Doctor">Love to heal others</option>
+                    </select>
+                </div>
             </div>
 
-            <select name="lead" data-conv-question="Do you like to lead other? ">
+            <select name="intro" data-conv-question="According to above survey I think Web development field will fit you the most. <br/> Do you want to know the roadmap for the same?">
                 <option value="yes">Yes</option>
                 <option value="No">No</option>
             </select>
-
-            <select name="error" data-conv-question="Do you like to find errors or mistakes and resolve? ">
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-            </select>
             
             <!--sirf display krna hai input nhi lena-->
-            <input type="text" name="thanks" data-conv-question="Thank you.">
+            <input type="text" name="bye" data-conv-question="I believe you will do your best and achieve success, so good luck<br/>Bye">
 
         </form>
     </div>
