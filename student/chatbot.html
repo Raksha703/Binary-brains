@@ -94,13 +94,19 @@
                 </div>
             </div>
 
-            <select name="intro" data-conv-question="According to above survey I think Web development field will fit you the most. <br/> Do you want to know the roadmap for the same?">
+            <select name="intro" data-conv-question="According to above survey I think Web development field will fit you the most. Are you agree?">
                 <option value="yes">Yes</option>
-                <option value="No">No</option>
+                <option value="no">No</option>
             </select>
+            <div data-conv-fork="intro">
+            <div data-conv-case="yes">
+                <input type="text" name="bye" data-conv-question="Please navigate to the home page to se the relevant roadmap. <br>I believe you will do your best and achieve success, so good luck<br/>Bye">
+            </div>
             
             <!--sirf display krna hai input nhi lena-->
-            <input type="text" name="bye" data-conv-question="I believe you will do your best and achieve success, so good luck<br/>Bye">
+            <div data-conv-case="no">
+                <input type="text" name="bye" data-conv-question="I believe you will do your best and achieve success, so good luck<br/>Bye">
+            </div>
 
         </form>
     </div>
