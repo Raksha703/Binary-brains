@@ -245,7 +245,7 @@ a:hover,
 /*  Banner Section */
 .banner-wrapper {
     margin-top: 8rem;
-    background-image: url('../images/banner/banner.webp');
+    background-image: url('banner.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -294,27 +294,27 @@ a:hover,
 }
 
 .parallax.img1 {
-    background-image: url('../images/banner/road.jpg');
+    background-image: url('road.jpg');
     height: 100%;
 }
 
 .parallax.img2 {
-    background-image: url('../images/Services/aboutUs.png');
+    background-image: url('aboutUs.png');
     height: 608px;
 }
 
 .parallax.img3 {
-    background-image: url('../images/Services/branding.webp');
+    background-image: url('branding.webp');
     height: 608px;
 }
 
 .parallax.img4 {
-    background-image: url('../images/Services/advertising.webp');
+    background-image: url('advertising.webp');
     height: 608px;
 }
 
 .parallax.img5 {
-    background-image: url('../images/Services/seo.webp');
+    background-image: url('seo.webp');
     height: 608px;
 }
 
