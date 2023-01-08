@@ -18,6 +18,10 @@ btn.addEventListener("click", redirectFunction);
       {
          alert("Please select only one role.");
       }
+      else if(check1.checked == false && check2.checked == true)
+      {
+         location = "student/mentor/index.html";
+      }
    }
 
 
