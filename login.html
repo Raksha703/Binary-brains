@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="student/images/logo1.ico" type="image/x-icon" />
+  <title>Sample HTML Code - NewsLetter Form</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+    @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+
+    body {
+      display: flex;
+      justify-content: center;
+      padding: 3rem 0;
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      color: white;
+      background-color: rgb(7,38,49);
+    }
+
+    main {
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+
+    .title {
+      padding: 1rem;
+      font-size: 1.75rem;
+    }
+
+    .sign-up {
+      width: 100%;
+    }
+
+    .sign-up-para {
+      padding: 1rem 5rem;
+      margin-bottom: 1.75rem;
+      border-radius: 0.8rem;
+      box-shadow: 0 8px 0px rgba(0 0 0/0.15);
+      background-color: #7138cc;
+      text-align: center;
+    }
+
+    .sign-up-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.2rem;
+      border-radius: 0.8rem;
+      box-shadow: 0 8px 0px rgba(0 0 0/0.15);
+      color: #b9b6d3;
+      background-color: white;
+    }
+
+    .form-input {
+      width: 100%;
+      margin-bottom: 1em;
+      position: relative;
+    }
+
+    .form-input span {
+      position: absolute;
+      top: 10%;
+      right: 0;
+      padding: 0 0.65em;
+      border-radius: 50%;
+      background-color: #ff7a7a;
+      color: white;
+      display: none;
+    }
+
+    .form-input.warning span {
+      display: inline-block;
+    }
+
+    .form-input input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 2px solid rgba(185, 182, 211, 0.25);
+      border-radius: 0.5em;
+      font-weight: 600;
+      color: #3e3c49;
+    }
+
+    .form-input input:focus {
+      outline: none;
+      border: 2px solid #b9b6d3;
+    }
+
+    .form-input.warning input {
+      border: 2px solid #ff7a7a;
+    }
+
+    .form-input p {
+      margin: 0.2em 0.75em 0 0;
+      display: none;
+      font-size: 0.75rem;
+      text-align: right;
+      font-style: italic;
+      color: #ff7a7a;
+    }
+
+    .form-input.warning p {
+      display: block;
+    }
+
+    .submit-btn {
+      cursor: pointer;
+      width: 100%;
+      padding: 1em;
+      margin-bottom: 1em;
+      border: none;
+      border-bottom: 5px solid #31bf81;
+      border-radius: 0.5em;
+      background-color: #38cc8c;
+      color: white;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .submit-btn:hover {
+      background-color: rgb(7,38,49);
+      border-bottom: 5px solid rgb(9, 26, 32);
+    }
+
+    .form-term {
+      margin-bottom: 0.75em;
+      font-size: 0.8rem;
+      text-align: center;
+      color: grey;
+    }
+
+    .form-term span {
+      font-weight: 700;
+      color: rgb(7,38,49);
+    }
+    
+    @media (min-width: 768px) {
+      body {
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      main {
+        max-width: 100vw;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .intro {
+        align-items: flex-start;
+        text-align: left;
+        width: 45%;
+        margin-right: 1rem;
+      }
+
+      .title {
+        padding: 0;
+        margin-bottom: 2rem;
+        font-size: 3rem;
+        line-height: 1.25em;
+      }
+
+      .sign-up {
+        width: 45%;
+      }
+
+      .sign-up-form {
+        padding: 1.75rem;
+      }
+
+      .sign-up-form input {
+        padding-left: 1.5em;
+      }
+    }.menu::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ff7a7a;
+  
+  transition: all 0.45s ease;
+}
+.nav {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  margin: 0;
+  padding: 0 25px;
+  box-sizing: border-box;
+  z-index: 99;
+}
+
+.nav a {
+  display: inline-block;
+  height: 75px;
+  line-height: 75px;
+  font-size: 30px;
+  padding: 0 25px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  
+  transition: all 0.32s ease;
+}
+
+body.menu-active .menu {
+  left: 0;
+}
+
+body.menu-active .menu::before {
+  background: white;
+}
+.nav a.link {
+  float: right;
+  position: relative;
+  text-align: center;
+}
+
+.nav a.link i {
+  position: absolute;
+  display: block;
+  transform: translateX(-50%);
+  
+  transition: all 0.32s ease;
+}
+.nav a.white {
+  color: white;
+}
+.nav a.link i.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav a.link:hover i {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav a.link:hover i.hidden {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav i.ion-cube {
+  display: inline-block;
+  position: absolute;
+  height: 75px;
+  line-height: 75px;
+  font-size: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+    </style>
+    <script>
+      $(".menu-activator").on("click", function() {
+$("body").toggleClass("menu-active");
+});
+  </script>
+ 
+</head>
+
+<body>
+  <main>
+    <div class="nav">
+      <a href="index.html" class="white link"><i class="ion-ios-redo-outline"></i><i class="ion-ios-redo hidden"></i></a>
+  <a href="index.html" class="menu-activator"><i class="ion-ios-more"></i></a>
+  <img  src="student/images/logo1.png" width="80px" height="80px" style="padding-top: 20px;" alt="">
+  </div>
+    <!-- intro section -->
+    <section class="intro">
+      <h1 class="title" >&emsp;&emsp;Career Enlighten&emsp;</h1>
+     
+    </section>
+
+    <!-- sign-up section -->
+    <section class="sign-up">
+      
+      <!-- the form itself -->
+      <form class="sign-up-form">
+        <div class="form-input">
+          <input type="text" name="first-name" id="first-name" placeholder="First Name" required>
+          <span>!</span>
+          <p class="warning">First name cannot be empty</p>
+        </div>
+
+        <div class="form-input">
+          <input type="text" name="last-name" id="last-name" placeholder="Last Name" required>
+          <span>!</span>
+          <p class="warning">Last name cannot be empty</p>
+        </div>
+
+        <div class="form-input">
+          <input type="email" name="email" id="email" placeholder="Email Address" required>
+          <span>!</span>
+          <p class="warning">Looks like this is not an email</p>
+        </div>
+
+        <div class="form-input">
+          <input type="Password" name="Password" id="Password" placeholder="Password" required>
+          <span>!</span>
+          <p class="warning">Password cannot be empty</p>
+        </div>
+        <input class="submit-btn" type="submit" value="Log in">
+        <p class="form-term">By clicking the button, you are agreeing to our <span>Terms and Services</span> </p>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>
