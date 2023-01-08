@@ -1,0 +1,58 @@
+/* body 
+{
+    background-image: url("images/student.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+} */
+
+/* Above lines for background image */
+
+body{
+    background-color:rgb(7, 38, 49);
+}
+
+h1{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.student-div
+{
+    width: 550px;
+    height: 350px;
+    background-color: #F6F6F2 ;
+    margin: 150px 480px;
+    border: solid rgb(144, 215, 155) 2px;
+    color: #388087;
+    text-align: center;
+    padding: 15px;
+    border-radius: 14px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.choose
+{
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.button
+{
+    font-size: 20px;
+    padding: 8px 20px;
+    border: solid black 2px;
+    border-radius: 5px;
+    margin-bottom: 3px;
+}
+
+button:hover
+{
+   background-color:rgb(104, 157, 159);
+}
+  
+ input.choose
+ {
+    width: 26px;
+    height: 19px;
+ } 
+
