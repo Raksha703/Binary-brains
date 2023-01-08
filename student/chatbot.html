@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/logo1.ico" type="image/x-icon" />
-    <title>Chatbot</title>
-    <link rel="stylesheet" href="chatbot-style.css";>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css";>
 
-    <link rel="stylesheet" type="text/css" href="chatbot-jquery.convform.css">
-    <script type="text/javascript" src="chatbot-jquery-3.6.3.js"></script>
-    <script type="text/javascript" src="chatbot-custom.js"></script>
-    <script type="text/javascript" src="chatbot-jquery.convform.js"></script>
+    <link rel="stylesheet" type="text/css" href="jquery.convform.css">
+    <script type="text/javascript" src="jquery-3.6.3.js"></script>
+    <script type="text/javascript" src="custom.js"></script>
+    <script type="text/javascript" src="jquery.convform.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Dosis&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <style> @import url('https://fonts.googleapis.com/css2?family=Dosis&family=Roboto:wght@100;300&display=swap'); </style>
 
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 </head>
 <body>
-    <img class="chat_icon" src="images/iii.png">
+    <img class="chat_icon" src="iii.png">
 
-    <img class="bg" src="images/back1.jpg" alt="Chatbot Service" >
+    <img class="bg" src="back.jpg" alt="Chatbot Service" >
 
     <div class="container">   
         <h3> Click here to access the assistant </h3>
@@ -28,11 +29,19 @@
 
     <div class="chat_box">
         <div class="conv-form-wrapper">
+        
+        
+            <div class="icon">
+                <i class="fas fa-user"></i>
+            </div>
+            
+
+            
 
             <input type="text" name="Hello" data-conv-question="Hello, I am your career assistant.">
 
             <select name="intro" data-conv-question="Are you confused in choosing your career field?">
-                <option value="yes">Yes</option>
+                <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select>
 
@@ -63,6 +72,7 @@
                 </div>
                 <div data-conv-case="Techie">
                     <select name="talkRes" data-conv-question="Which description sits your personality the most?">
+                        <option value="Data">To obtain, scrub, explore, model, and interpret data, blending hacking, statistics, and machine learning</option>
                         <option value="Web">To create creative pages for easy access</option>
                         <option value="App">Creating small icon which functions in wide range</option>
                         <option value="Game">Help in developing out of the box ideas to casual user</option>
@@ -94,7 +104,7 @@
                 </div>
             </div>
 
-            <select name="intro" data-conv-question="According to above survey I think Web development field will fit you the most. Are you agree?">
+            <select name="intro" data-conv-question="According to above survey I think DATA SCIENCE field will fit you the most. Are you agree?">
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
             </select>
@@ -103,11 +113,12 @@
                 <input type="text" name="bye" data-conv-question="Please navigate to the home page to se the relevant roadmap. <br>I believe you will do your best and achieve success, so good luck<br/>Bye">
             </div>
             
-            <!--sirf display krna hai input nhi lena-->
+            
             <div data-conv-case="no">
                 <input type="text" name="bye" data-conv-question="I believe you will do your best and achieve success, so good luck<br/>Bye">
             </div>
-
+        </div>
+            
         </form>
     </div>
     </div>
